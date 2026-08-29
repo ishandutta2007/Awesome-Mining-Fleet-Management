@@ -14,41 +14,29 @@ This repository tracks notable **SaaS / industrial platforms** and **open-source
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Hexagon Mining (MineOperate / OP Pro)](https://hexagon.com/)**  
-  Enterprise mine fleet management and operations platform — dispatch, equipment tracking, and production integration for surface mining.
 
-- **[Modular Mining (DISPATCH)](https://www.modularmining.com/)**  
-  Industry-standard fleet management and dynamic truck assignment system (Komatsu) used at major surface mines worldwide.
-
-- **[Wenco](https://www.wencomine.com/)**  
-  OEM-agnostic fleet management system focused on surface mining — telemetry, optimization, and production intelligence (Hitachi Construction Machinery).
-
-- **[Micromine Pitram](https://www.micromine.com/)**  
-  Mine control and fleet/production management solution for real-time operational visibility and short-interval control.
-
-- **[Epiroc Mobilaris](https://www.epiroc.com/)**  
-  Underground and surface positioning, traffic, and fleet-related solutions for mining operations.
-
-- **[Sandvik OptiMine](https://www.rocktechnology.sandvik/)**  
-  Underground mining information and process optimization suite integrating equipment and people data.
-
-- **[RPMGlobal](https://rpmglobal.com/)**  
-  Mining software suite including fleet and mine management capabilities alongside planning and simulation tools.
-
-- **[Aitik Fleet / site-specific fleet systems](https://www.boliden.com/)**  
-  Examples of large-site or OEM-integrated fleet management deployments at major operations.
-
-- **[ASI Mining](https://www.asirobots.com/)**  
-  Autonomous and semi-autonomous mining vehicle and fleet coordination technology (associated with Epiroc).
-
-- **[GroundHog](https://www.groundhogapps.com/)**  
-  Open-pit and underground fleet and operations applications for monitoring, dispatch support, and production tracking.
+| Platform | Primary Focus & Capabilities | Starting Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[GroundHog](https://groundhogapps.com/)** | Cloud FMS, short-interval control, and production tracking for open-pit and underground mines. | Starts at **$20,000/year** (or ~$1,666/month pay-per-project contractor baseline). | **6-week free on-site pilot program** (no credit card required; full modular access). |
+| **[Caterpillar MineStar](https://www.cat.com/en_US/products/new/technology/minestar.html)** | Cloud-connected equipment tracking, production recording, terrain guidance, and dispatch (MineStar Edge & Fleet). | Starts at **$3,000/year site base fee + ~$250/asset/month** (MineStar Edge cloud tier). | **180-day free trial** of Health Equipment Insights on new Cat machines; **30–90 day** dealer demo kit pilots. |
+| **[Fleetio](https://www.fleetio.com/)** | Cloud fleet operations, preventative maintenance schedules, inspections, fuel, and equipment telematics aggregation. | Starts at **$4/vehicle/month** (billed annually, 5-vehicle minimum = **$20/month** starting cost). | **14-day free trial** (no credit card required; full platform access for all registered vehicles). |
+| **[Micromine Pitram](https://www.micromine.com/pitram/)** | Real-time mine control, automated haulage dispatch, short-interval control, and equipment telemetry. | Starts at **$250 AUD/day** (~$5,000 AUD/month modular subscription tier). | **30-day free trial** on select modules (e.g. Alastri with consulting setup); **100% free academic access** via Micromine University Program. |
+| **[Samsara](https://www.samsara.com/)** | Heavy machinery & mining support fleet telematics, real-time GPS tracking, AI safety cameras, and CAN diagnostics. | Starts at **$27/vehicle/month** (software subscription + ~$99 hardware gateway; 3-year term). | **30-day hardware & software trial** (30-day money-back guarantee / full refund return window). |
+| **[Trackunit](https://www.trackunit.com/)** | Off-highway machine telematics, heavy equipment health, CAN-bus integration, and utilization monitoring. | Starts at **$15/asset/month** (base Raw/Spot telematics software tier; 36-month agreement). | **30-day free pilot evaluation** on up to 5 machines upon technical consultation. |
+| **[Geotab](https://www.geotab.com/)** | Ruggedized heavy-duty vehicle telematics, engine diagnostics, fuel monitoring, and site safety analytics. | Starts at **$30/vehicle/month** (bundled GO hardware + Pro telematics tier). | **30-day free pilot** for up to 20 vehicles (free demo units shipped); **30-day free trial** for Altitude analytics. |
+| **[Hexagon Mining (HxGN MineOperate)](https://hexagon.com/products/product-groups/mineoperate)** | Surface/underground dispatch optimization, machine guidance, payload monitoring, and autonomous coordination. | Starts at **$25,000/site/year** (OP Foundation / entry telematics tier). | **30 to 60-day enterprise Proof-of-Concept (POC)** on selected production equipment with engineer support. |
+| **[Modular Mining (Komatsu DISPATCH)](https://www.modularmining.com/)** | Real-time dynamic truck-shovel assignment, LP haulage optimization, and open-pit fleet management. | Starts at **$30,000/year** (base modular site license subscription for mid-sized operations). | **30-day guided operational simulation & site POC demo** on active haul profiles. |
+| **[Wenco Mine Systems](https://www.wencomine.com/)** | OEM-agnostic open-pit fleet management, high-precision GPS machine guidance, and production dispatch (Hitachi). | Starts at **$22,000/site/year** (Wenco Lite / production tracking entry baseline). | **30-day on-site pilot demonstration program** with pre-configured mobile tablet hardware. |
+| **[Sandvik OptiMine](https://www.rocktechnology.sandvik/en/products/digital-mining-solutions/optimine/)** | Underground digital operations suite, 3D spatial machine tracking, schedule compliance, and production analytics. | Starts at **$24,000/year** (modular starter package for underground mobile asset tracking). | **30-day site digital twin simulation pilot** with dedicated application specialist support. |
+| **[Epiroc Mobilaris](https://www.epiroc.com/)** | Underground 3D positioning, situational awareness, traffic control, and mobile machine monitoring. | Starts at **$20,000/year** (Mobilaris Mining Intelligence entry monitoring package). | **30-day virtual site model pilot / proof of concept** with custom mine layout. |
+| **[RPMGlobal](https://rpmglobal.com/)** | Mining asset management, maintenance lifecycle tracking, fleet scheduling, and simulation (AMT/MinePlanner). | Starts at **$18,000/year** (entry AMT asset management subscription). | **30-day guided software trial & personalized sandbox demo** with sample fleet data. |
+| **[ASI Mining](https://www.asirobots.com/)** | OEM-agnostic autonomous haulage systems (AHS), semi-autonomous command, and multi-vehicle dispatch (Mobius). | Starts at **$35,000/year** (Mobius Core baseline coordination software license). | **30-day virtual simulation testbed trial** with digital autonomous haulage scenario evaluation. |
 
 ## Open-Source GitHub Projects
 - **[General open telematics and GPS tracking stacks](https://github.com/)**  
