@@ -1,215 +1,108 @@
 # Awesome-Mining-Fleet-Management
 
-## Top Agronomy Management Platforms Ecosystem
-
+## Top Fleet Management (Mining) Platforms Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Crop Planning, Scouting, Field Records, Recommendations, Input Tracking & Agronomic Decision Support*
-
+*Focused on Mine Dispatch, Haul Truck Optimization, Equipment Telemetry, Production Tracking & Autonomous Fleet Coordination*
 **Last updated: August 2026**
 
+This repository tracks notable **SaaS / industrial platforms** and **open-source projects** for **Mining Fleet Management**. These systems optimize truck–shovel assignment, track mobile equipment, reduce queue time, and integrate with production and safety systems in surface and underground mines.
 
+**Examples** include Hexagon Mining, Modular Mining, Wenco, Micromine Pitram, Epiroc Mobilaris, Sandvik OptiMine, RPMGlobal, Aitik Fleet, ASI Mining, and GroundHog (the category leaders).
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Agronomy Management**. These systems help agronomists and growers plan crops, record field activities, scout pests and diseases, manage recommendations, and connect observations to outcomes.
-
-
-
-**Examples** include Agworld, Conservis, FarmQA, Cropwise Operations, FieldAlytics, Taranis, EOSDA Crop Monitoring, AgriWebb, eAgronom, and FarmLogic (the category leaders).
-
-
-
-**Open-source emphasis**: Farm and field record-keeping has a strong open foundation in **farmOS**. Additional open geospatial, sensor, and mapping tools support custom agronomy workflows. This section highlights those options.
-
-
+**Open-source emphasis**: Industrial mining fleet management and dispatch is almost entirely commercial. There is no widely adopted open-source equivalent to DISPATCH, MineOperate, or Pitram. Related open building blocks exist for telemetry, GIS, and general fleet tracking; crypto-ASIC “fleet” tools are unrelated to mine haulage. This section is honest about that gap.
 
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
-
-
 ## Table of Contents
-
 - [SaaS/Hosted Platforms](#saas-products)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
-
-
 ## SaaS/Hosted Platforms
+- **[Hexagon Mining (MineOperate / OP Pro)](https://hexagon.com/)**  
+  Enterprise mine fleet management and operations platform — dispatch, equipment tracking, and production integration for surface mining.
 
-- **[Agworld](https://www.agworld.com/)**  
+- **[Modular Mining (DISPATCH)](https://www.modularmining.com/)**  
+  Industry-standard fleet management and dynamic truck assignment system (Komatsu) used at major surface mines worldwide.
 
-  Agronomy and farm operations platform connecting plans, work orders, scouting, inputs, and field records for growers and advisors.
+- **[Wenco](https://www.wencomine.com/)**  
+  OEM-agnostic fleet management system focused on surface mining — telemetry, optimization, and production intelligence (Hitachi Construction Machinery).
 
+- **[Micromine Pitram](https://www.micromine.com/)**  
+  Mine control and fleet/production management solution for real-time operational visibility and short-interval control.
 
+- **[Epiroc Mobilaris](https://www.epiroc.com/)**  
+  Underground and surface positioning, traffic, and fleet-related solutions for mining operations.
 
-- **[Conservis](https://conservis.ag/)**  
+- **[Sandvik OptiMine](https://www.rocktechnology.sandvik/)**  
+  Underground mining information and process optimization suite integrating equipment and people data.
 
-  Enterprise farm management focused on operational visibility, inventory, and agronomic record-keeping at scale.
+- **[RPMGlobal](https://rpmglobal.com/)**  
+  Mining software suite including fleet and mine management capabilities alongside planning and simulation tools.
 
+- **[Aitik Fleet / site-specific fleet systems](https://www.boliden.com/)**  
+  Examples of large-site or OEM-integrated fleet management deployments at major operations.
 
+- **[ASI Mining](https://www.asirobots.com/)**  
+  Autonomous and semi-autonomous mining vehicle and fleet coordination technology (associated with Epiroc).
 
-- **[FarmQA](https://www.farmqa.com/)**  
-
-  Agronomy software for crop scouting, field observations, recommendations, and grower communication with traceable workflows.
-
-
-
-- **[Cropwise Operations (Syngenta)](https://www.cropwise.com/)**  
-
-  Digital agronomy and farm operations suite for planning, monitoring, and optimizing crop production.
-
-
-
-- **[FieldAlytics](https://www.fieldalytics.com/)**  
-
-  Precision agronomy and field data platform supporting recommendations, mapping, and advisor–grower collaboration.
-
-
-
-- **[Taranis](https://www.taranis.com/)**  
-
-  AI-powered crop intelligence and scouting from high-resolution imagery for early stress and pest detection.
-
-
-
-- **[EOSDA Crop Monitoring](https://eos.com/products/crop-monitoring/)**  
-
-  Satellite-based crop monitoring and analytics platform for vegetation indices, field scouting support, and yield-related insights.
-
-
-
-- **[AgriWebb](https://www.agriwebb.com/)**  
-
-  Livestock and farm record-keeping platform (also used in mixed operations) with strong field and activity logging.
-
-
-
-- **[eAgronom](https://eagronom.com/)**  
-
-  Farm management and agronomy-oriented software popular in European markets for planning and compliance-oriented records.
-
-
-
-- **[FarmLogic](https://www.farmlogic.com/)**  
-
-  Farm and field record systems supporting chemical, fertilizer, and activity documentation for compliance and management.
-
-
+- **[GroundHog](https://www.groundhogapps.com/)**  
+  Open-pit and underground fleet and operations applications for monitoring, dispatch support, and production tracking.
 
 ## Open-Source GitHub Projects
+- **[General open telematics and GPS tracking stacks](https://github.com/)**  
+  Self-hosted GPS/AVL platforms (e.g. Traccar-style) that can track vehicles but lack mine-specific dispatch optimization.
 
-- **[farmOS](https://github.com/farmOS/farmOS)**  
+- **[Open GIS and mine mapping tools](https://github.com/)**  
+  QGIS, PostGIS, and open spatial stacks used for pit maps, roads, and geofences that feed commercial FMS.
 
-  Leading open-source web-based farm management and record-keeping application — assets, areas, logs, plans, and API-first design for crops, livestock, and equipment.
+- **[MQTT / industrial IoT open brokers](https://github.com/)**  
+  Message brokers and collectors used to ingest equipment telemetry into site historians or custom dashboards.
 
+- **[Open time-series databases for equipment data](https://github.com/)**  
+  InfluxDB, TimescaleDB, and similar stores for high-frequency machine metrics outside the FMS.
 
+- **[Grafana and open operational dashboards](https://github.com/)**  
+  Visualization of production and equipment KPIs when data is exported from commercial fleet systems.
 
-- **[farmOS-map and mapping libraries](https://github.com/farmOS/farmOS-map)**  
+- **[Open simulation and optimization libraries](https://github.com/)**  
+  OR-Tools and similar solvers sometimes used in research or custom short-interval control experiments (not production FMS).
 
-  OpenLayers-based mapping components tailored for agricultural field and asset mapping.
+- **[Mine planning open research tools](https://github.com/)**  
+  Academic and research code for scheduling and haulage modeling — not certified for operational dispatch.
 
+- **[Safety and proximity open prototypes](https://github.com/)**  
+  Experimental proximity and collision-awareness projects (must never replace certified CAS).
 
+- **[Data export and historian open connectors](https://github.com/)**  
+  Scripts that pull cycle times and tonnage from commercial FMS APIs into open analytics environments.
 
-- **[farmOS.js / farmOS.py clients](https://github.com/farmOS)**  
-
-  Official client libraries for integrating external tools and scripts with farmOS servers.
-
-
-
-- **[farmOS Field Kit](https://github.com/farmOS/field-kit)**  
-
-  Offline-first companion app patterns for recording observations in the field.
-
-
-
-- **[Open geospatial agronomy stacks](https://github.com/)**  
-
-  QGIS, PostGIS, and Earth Engine scripts used for vegetation indices, field boundaries, and zone management.
-
-
-
-- **[Open weather and soil data pipelines](https://github.com/)**  
-
-  Scripts that pull public weather, soil, and climate layers into farm record systems.
-
-
-
-- **[Sensor and IoT open collectors](https://github.com/)**  
-
-  MQTT/Node-RED style pipelines for soil moisture, weather stations, and equipment data into open farm systems.
-
-
-
-- **[Open scouting form templates](https://github.com/)**  
-
-  Configurable mobile form tools used with farmOS or standalone for pest, disease, and growth stage logs.
-
-
-
-- **[Precision ag open formats](https://github.com/)**  
-
-  Support for ISOXML, shapefiles, and other field-operation data exchange formats in open toolchains.
-
-
-
-- **[Research and extension open notebooks](https://github.com/)**  
-
-  Analysis templates for trial data, yield response, and recommendation support that complement commercial agronomy platforms.
-
-
+- **[Note on crypto-miner “fleet” software](https://github.com/)**  
+  Open tools for managing Bitcoin/ASIC miner farms exist but are **not** applicable to mining haul trucks, shovels, or underground fleets.
 
 ### Additional Strong Open-Source Options
+- Using open telematics only for non-critical visibility or contractor light vehicles.
+- Exporting FMS cycle and delay data into open analytics for continuous improvement studies.
+- Maintaining pit geometry and road networks in open GIS for planning and emergency response.
+- Never relying on open or experimental code for primary dispatch, collision avoidance, or autonomous control.
+- Participating in industry standards work (data interfaces, OEM telemetry) rather than expecting a full open FMS.
 
-- Self-hosting **farmOS** for complete ownership of farm and agronomy records.
-
-- Using farmOS logs and plans as the system of record while connecting commercial imagery (e.g. satellite NDVI) via API.
-
-- Mapping fields once in open GIS tools and reusing boundaries across seasons.
-
-- Combining open weather/soil data with farmOS for basic decision support without a full commercial stack.
-
-- Aggregating multiple farmOS instances for cooperatives or advisors via open aggregator patterns.
-
-- Contributing modules and translations back to the farmOS community.
-
-
-
-**Frameworks for building custom systems**: Run **farmOS** for records and planning, add open mapping and sensor feeds, and optionally layer commercial imagery or scouting AI (Taranis, EOSDA, etc.) where needed. This keeps core operational data under farm or advisor control. Commercial agronomy platforms (Agworld, FarmQA, Conservis, Cropwise, FieldAlytics, etc.) still lead in polished advisor workflows, regulatory reporting packs, integrated product recommendations, and large-scale multi-farm support.
-
-
+**Frameworks for building custom systems**: There is no practical open-source replacement for production mining fleet management. Sites run **Hexagon, Modular DISPATCH, Wenco, Pitram, OptiMine, GroundHog**, or OEM suites (e.g. Cat MineStar) as the system of record for assignment and safety-critical tracking. Open tools can support secondary analytics, mapping, and research. Autonomy and collision avoidance require certified commercial systems.
 
 ## How to Contribute
-
 1. Fork the repo.
-
 2. Add/edit entries in `README.md` (follow existing format).
-
 3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
 4. Submit PR with a short explanation.
-
-
 
 Star the repo if you find it useful!
 
-
-
 ## Disclaimer
-
 - This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Agronomic recommendations affect yield, environment, and compliance (pesticide records, nutrient plans). Open software does not replace licensed agronomist judgment or local regulations. Validate any automated insights against field conditions. Protect farm data according to agreements with growers and applicable privacy rules.
-
-- This list is not agronomic advice.
-
-
+- Mining fleet management is safety- and production-critical. Incorrect dispatch or disabled safety systems can cause serious incidents. Open-source or experimental software must not be used for primary truck assignment, collision avoidance, or autonomous operation. Always follow OEM and site procedures, and involve qualified mining engineers and OT security teams.
+- This list is not operational or safety advice.
 
 ---
-
-**Made for agronomists, growers, and digital agriculture builders who keep field knowledge in good order.**
-
-Let's keep farm records open, portable, and useful for better decisions.
+**Made for mine operations, fleet engineers, and technology teams optimizing haulage under real constraints.**
+Let's keep production data useful while recognizing that certified commercial FMS remains essential underground and on the pit floor.
