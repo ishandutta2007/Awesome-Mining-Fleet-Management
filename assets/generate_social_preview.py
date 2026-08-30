@@ -8,8 +8,8 @@ import zlib
 import os
 
 WIDTH, HEIGHT = 640, 320
-TOTAL_FRAMES = 60
-FRAME_DURATION_MS = 80  # ~12.5 fps
+TOTAL_FRAMES = 30
+FRAME_DURATION_MS = 133  # ~7.5 fps, keeps ~4s loop
 
 # Color palette
 BG_DARK = (9, 13, 22)
@@ -407,14 +407,8 @@ def draw_frame(frame_idx):
     fb = FrameBuffer(WIDTH, HEIGHT)
     t = frame_idx / TOTAL_FRAMES  # 0..1 progress through animation cycle
 
-    # 1) Background gradient (approximate with horizontal bands)
-    for y in range(HEIGHT):
-        fy = y / HEIGHT
-        r = int(9 + (15 - 9) * fy * 0.5)
-        g = int(13 + (23 - 13) * fy * 0.5)
-        b = int(22 + (42 - 22) * fy * 0.5)
-        for x in range(WIDTH):
-            fb.pixels[y * WIDTH + x] = (r, g, b)
+    # 1) Background (flat fill for better GIF compression)
+    fb.fill(BG_DARK)
 
     # 2) Grid overlay
     for y in range(0, HEIGHT, 20):
@@ -465,28 +459,22 @@ def draw_frame(frame_idx):
     # 6) Radar sweep
     radar_angle = t * 2 * math.pi
     sweep_len = int(100 * SX)
-    rx = pcx + math.cos(radar_angle) * sweep_len
-    ry = pcy + math.sin(radar_angle) * sweep_len
     # Draw a fading radar arm
+    arm_color = blend_color(BG_DARK, CYAN, 0.3)
     for i in range(max(1, sweep_len)):
-        ti = i / sweep_len
         ax = pcx + math.cos(radar_angle) * i
         ay = pcy + math.sin(radar_angle) * i
-        alpha = 0.3 * (1 - ti * 0.5)
-        c = blend_color(BG_MID, CYAN, alpha)
-        fb.set_pixel(ax, ay, c)
-        fb.set_pixel(ax + 1, ay, c)
-        fb.set_pixel(ax, ay + 1, c)
-    # Fading trail behind the arm
-    for trail in range(1, 20):
-        trail_angle = radar_angle - trail * 0.03
+        fb.set_pixel(ax, ay, arm_color)
+        fb.set_pixel(ax + 1, ay, arm_color)
+        fb.set_pixel(ax, ay + 1, arm_color)
+    # Fading trail behind the arm (fewer steps, quantized colors)
+    trail_color = blend_color(BG_DARK, CYAN, 0.1)
+    for trail in range(1, 8):
+        trail_angle = radar_angle - trail * 0.05
         for i in range(max(1, sweep_len)):
-            ti = i / sweep_len
             ax = pcx + math.cos(trail_angle) * i
             ay = pcy + math.sin(trail_angle) * i
-            alpha = 0.08 * (1 - trail / 20) * (1 - ti * 0.5)
-            c = blend_color(BG_MID, CYAN, alpha)
-            fb.set_pixel(ax, ay, c)
+            fb.set_pixel(ax, ay, trail_color)
 
     # 7) Waypoint nodes (with pulsing)
     pulse = (math.sin(t * 2 * math.pi) + 1) / 2  # 0..1
@@ -590,7 +578,7 @@ def main():
     for i in range(TOTAL_FRAMES):
         print(f"  Rendering frame {i + 1}/{TOTAL_FRAMES}...", end='\r')
         fb = draw_frame(i)
-        indices, palette = fb.quantize(256)
+        indices, palette = fb.quantize(64)
         gif.add_frame(indices, palette, FRAME_DURATION_MS)
 
     gif.save()
